@@ -4,7 +4,11 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA]) 
+external_scripts = [
+    {'src': 'https://cdn.paddle.com/paddle/paddle.js'}
+]
+
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA], external_scripts=external_scripts) 
 app.title = 'Powered by Tasting Intelligence'
 
 server = app.server
