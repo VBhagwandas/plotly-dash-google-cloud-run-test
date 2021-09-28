@@ -14,3 +14,11 @@ Paddle.Audience.Popup({
     cta: "Sign me up!"
   }
 });
+
+function openCheckout() {
+	Paddle.Checkout.open({ 
+		product: 16498 
+		passthrough: {"dashboard_name": "test plan 1 yearly"}
+		});	
+}
+document.getElementById('buy').addEventListener('click', openCheckout, false);
